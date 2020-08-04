@@ -1,0 +1,104 @@
+#include <iostream>
+#include <string>
+
+
+int main()
+{   
+    std::string answer;
+    std::string question_attempt;
+    int pin = 0;
+    int entry = 0;
+    int attempts = 0;
+    int number = 0;
+    TheStartOff:
+    
+    std::cout << "Welcome To DatBank, The Most Secure Bank On The Planet\n";
+    std::cout << "==============================================================\n";
+    std::cout << "Please Choose A 4-Digit PIN\n";
+    std::cin >> pin;
+    std::cout << "...\n";
+    std::cout << "...\n";
+    std::cout << "...\n";
+    std::string question;
+    std::string question_Two;
+    std::string question_Three;
+    std::cout << "Now please could you create a security question to recover your account if necessary\n";
+    std::cout << "Please remember to use underscores instead of spaces for the question and answer\n";
+    std::cout << "Please choose a number beween 1 and 3 : \n";
+    std::cout << "1.What_was_the_name_of_your_first_pet?\n ";
+    std::cout << "2.Which_country_where_you_born_in?\n";
+    std::cout << "3.Where_was_your_first_address?\n";
+    std::cin >> number;
+    switch (number){
+        
+        case 1:
+        std::cout << "Your Security Question is: What_was_the_name_of_your_first_pet?\n";
+        question = "What_was_the_name_of_your_first_pet?";
+        break;
+        
+        case 2:
+        std::cout << "Your Security Question is : Which_country_where_you_born_in?\n";
+        question = "Which_country_where_you_born_in?";
+        break;
+        
+        case 3:
+        std::cout << "Your Security Question is : Where_was_your_first_address?\n";
+        question = "Where_was_your_first_address?";
+        }
+    std::cout << "Thank you, your question has been saved\n";
+    std::cout << "Please Enter the answer : ";
+    std::cin >> answer;
+    std::cout << "Thank you, your Security Answer has been saved\n";
+    std::cout << "Please re-enter your PIN to access your DatBank Account\n";
+     
+    for (int attempts = 0; attempts < 5; attempts++){
+        
+        std::cin >> entry;
+       
+        
+        if (entry == pin){
+            std::cout << "Access Granted\n";
+            
+            
+            std::cout << "Please enter the answer to: " << question << " so that we can authorise you : ";
+            std::cin >> question_attempt;
+             if(question_attempt == answer){
+                 std::cout << "You have been authorised\n";
+                 std::cout << "Please Enjoy!\n";
+                 return(0);
+                 }
+             if (question_attempt != answer){
+                 std::cout << "You are un-authorised\n";
+                 std::cout << "Please wait while we reload the page.\n" << "If you hve any problems, please consult Customer Services\n" << "DatBank, Service with a smile :-)\n";
+                 std::cout << "\n" << "\n";
+                 std::cout << "Reloading...\n";
+                 std::cout << "Reloading...\n";
+                 std::cout << "Reloading...\n";
+                 std::cout << "\n" << "\n" << "\n";
+                 goto TheStartOff;
+                 }
+            
+            
+            
+            
+            }
+        
+            
+
+        if (entry != pin) {
+          
+            std::cout << "Access Denied\n";
+           
+        
+        
+        attempts++;
+        continue;
+        }
+    }
+       
+         
+        std::cout << "You are now locked out of your account.\n";
+        std::cout << "Please consult DatBank's Customer Service Team to renounce your Lock.\n";
+        std::cout << "Best Wishes, \n" << "DatBank\n" << "Service with a smile :-)\n";
+       }
+    
