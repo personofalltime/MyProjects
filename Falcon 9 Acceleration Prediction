@@ -1,0 +1,22 @@
+#include <iostream>
+#include <windows.h>
+
+int main()
+{
+    double mass = 549054;
+    double force = 22819376.9;
+    int time = 0;
+    int digit = 1000;
+
+    for (mass > 25600; mass = mass - 1.45149558; time++) {
+        double acceleration = force / mass;
+        std::cout << "Acceleration equals: " << acceleration << "\n";
+        
+        if (time == digit) {
+            std::cout << digit / 1000 << " seconds have passed!";
+            Sleep(1000);
+            digit = (digit * 1000) + 1000;
+        }
+    }
+    
+}
