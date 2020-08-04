@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+
+int main(){
+    std::cout << "Time to play...\n";
+    std::cout << "BATTLESHIPS\n";
+    std::cout << "(cue dramatic opening sounds)";
+    int user_choice_1 = 0;
+    int user_choice_2 = 0;
+    int user_choice_3 = 0;
+    std::cout << "choose a number between 1 and 10\n";
+    std::cout << "if you get the same number as the computer, then you have sunk it's mothership and you win\n";
+    int max = 10;
+    srand(time(0));
+    int computer_choice = rand()%max;
+    std::cout << "type your first choice in!\n";
+    std::cin >> user_choice_1;
+    if(user_choice_1 == computer_choice){
+        std::cout << "Good job!";
+        }
+    if(user_choice_1 != computer_choice){
+        std::cout << "Unlucky, try again!\n";
+        }
+        std::cout << "choice duos!\n";
+        std::cin >> user_choice_2;
+    if(user_choice_2 == computer_choice){
+        std::cout << "Great job!\n";
+    }
+    if(user_choice_2 != computer_choice){
+        std::cout << "go on, you can do it!\n";
+    }
+    std::cout << "time for a grand finale";
+    std::cin >> user_choice_3;
+     if(user_choice_3 == computer_choice){
+        std::cout << "3rd times the charm!\n";
+        }
+    if(user_choice_3 != computer_choice){
+        std::cout << "Unlucky, restart the game to try again!\n";
+    }
+    std::cout << "The battleship number was " << computer_choice <<"!!!!";
+    
+}
