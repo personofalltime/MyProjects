@@ -1,0 +1,32 @@
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string birthday = "03";
+      string birthmonth = "08";
+      string hadday = "22";
+      string hadmonth = "07";
+      Console.WriteLine("Please enter the current day in the format:    dd");
+      string currentDay = Console.ReadLine();
+      Console.WriteLine("Please enter the current month in the format:   mm");
+      string currentMonth = Console.ReadLine();
+      if(currentDay + currentMonth ==  birthday + birthmonth)
+      {
+        Console.WriteLine("HAPPY BIRTHDAY\n" + "----------------------\n" +     "| CONGRATULATIONS!!! |\n" + "----------------------\n");
+      }
+      else if (currentDay + currentMonth == hadday + hadmonth)
+            {
+        Console.WriteLine("HAPPY BIRTHDAY\n" + "----------------------\n" +     "| CONGRATULATIONS!!! |\n" + "----------------------\n");
+      }
+      else{
+        Console.WriteLine("Soz, but it's not a special day today :(\n");
+      }
+
+
+    }
+  }
+}
