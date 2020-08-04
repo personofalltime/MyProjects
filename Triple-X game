@@ -1,0 +1,47 @@
+#include <iostream>
+#include <time.h>
+int main()
+{
+	int level = 1;
+	int attempt1 = 0;
+    int attempt2 = 0;
+    int attempt3 = 0;
+
+	start:
+
+	int maximum1 = 9;
+	srand(time(0));
+	int maximum2 = 9;
+	srand(time(0));
+	int maximum3 = 9;
+	srand(time(0));
+
+	int rand1 = rand()% maximum1;
+	int rand2 = rand()% maximum2;
+	int rand3 = rand()% maximum3;
+
+	int multiply = rand1 * rand2 * rand3;
+
+	int addition = rand1 + rand2 + rand3;
+
+	std::cout << "You are a top-class secret agent and you need to crack this safe for your country and your life\n";
+	std::cout << "You are currently on level " << level << " and will rise as you beat each lock\n";
+    std::cout << "This PIN is three letters long and some hints are detailed below:\n";
+	std::cout << "  +     The digits add up to: " << addition << "\n" ;
+	std::cout << "  +     The digits multiply up to: " << multiply << "\n";
+
+	std::cout << "Please enter each of the three numbers in the PIN: \n";
+	std::cin >> attempt1;
+	std::cin >> attempt2;
+	std::cin >> attempt3;
+
+	if (((attempt1 * attempt2 * attempt3) == multiply) && ((attempt1 + attempt2 + attempt3) == addition)) {
+		std::cout << "proceed to level: " << level << "\n";
+		level++;
+		goto start;
+	}
+	else {
+		std::cout << "mission failed: please try again";
+		goto start;
+	}
+}
