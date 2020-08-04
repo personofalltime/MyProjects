@@ -1,0 +1,63 @@
+import tkinter
+from tkinter import *
+
+
+window = tkinter.Tk()
+
+window.geometry('500x500')
+
+
+
+window.configure(bg = 'white')
+
+var = StringVar(window)
+
+Label1 = tkinter.Label(window, text = "Please enter digit 1:", bg = 'white', fg = 'black').grid(column = 1, row = 1)
+
+name = tkinter.StringVar()
+name_entry = tkinter.Entry(window, textvariable = name)
+name_entry.grid(column = 2, row = 1)
+
+Label1 = tkinter.Label(window, text = "Please choose the symbol you'd like to use: ", bg = 'white', fg = 'black').grid(column = 1, row = 2)
+
+name2 = tkinter.Variable()
+name_entry2 = tkinter.OptionMenu(window, name2, "*", "÷", "-", "+")
+name_entry2.grid(column = 2, row = 2)
+
+Label1 = tkinter.Label(window, text = "Please enter digit 2:", bg = 'white', fg = 'black').grid(column = 1, row = 3)
+
+name3 = tkinter.StringVar()
+Entry2 = tkinter.Entry(window, textvariable = name3)
+Entry2.grid(column = 2, row = 3)
+
+def result():
+
+    num1 = float(name.get())
+    num2 = float(name3.get())
+    sign = name2.get()
+
+    if sign == "*":
+        num3 = num1 * num2
+        result = tkinter.Label(window, text = num3)
+        result.grid(column = 1, row = 5)
+    elif sign == "÷":
+        num3 = num1 / num2
+        result = tkinter.Label(window, text = num3)
+        result.grid(column = 1, row = 5)
+    elif sign == "-":
+        num3 = num1 - num2
+        result = tkinter.Label(window, text = num3)
+        result.grid(column = 1, row = 5)
+    elif sign == "+":
+        num3 = num1 + num2
+        result = tkinter.Label(window, text = num3)
+        result.grid(column = 1, row = 5)
+
+
+Button3 = tkinter.Button(window, text = "Enter", command = result)
+Button3.configure(bg = 'black', fg = 'white', height = 5, width = 10)
+Button3.grid(column = 2, row = 4)
+
+
+
+mainloop()
