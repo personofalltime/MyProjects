@@ -1,0 +1,24 @@
+#include <iostream>
+#include <windows.h>
+#include <vector>
+#include <math.h>
+
+int main()
+{
+    int i = 7;
+    std::vector<int> primes;
+    primes.push_back(3);
+    primes.push_back(5);
+
+    for (unsigned long long i = 7; i += 2;) {
+
+        for (int j = 0; i % primes[j] != 0; j++) {
+
+            if (sqrt(i) > 0) {
+                std::cout << i << "\n";
+                primes.push_back(j);
+                break;
+            }
+        }
+    }
+}
