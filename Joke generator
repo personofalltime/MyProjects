@@ -1,0 +1,133 @@
+ Jokes_Begin:
+
+
+    srand(time(0));
+    int number = rand() % max;
+
+
+
+    switch (number) {
+
+        case 1:
+            Sleep(500);
+            std::cout << "I have a friend. He keeps trying to convince me he's a compulsive liar, but I don't believe him.\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 2:
+            Sleep(500);
+            std::cout << "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 3:
+            Sleep(500);
+            std::cout << "My first experience with culture shock? Probably when I peed on an electric fence.\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 4:
+            Sleep(500);
+            std::cout << "As I get older and I remember all the people I've lost along the way, I think to myself, maybe a career as a tour guide wasn't for me\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+            else {
+                exit(0);
+            }
+            break;
+
+        case 5:
+            Sleep(500);
+            std::cout << "The person who invented autocorrect should burn in hello\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 6:
+            Sleep(500);
+            std::cout << "My wife and I were happy for twenty years; then we met\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 7:
+            Sleep(500);
+            std::cout << "Always borrow money from a pessimist. He won't expect it back\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+        case 8:
+            Sleep(500);
+            std::cout << "Thanks for explaining the word 'many' to me, it means a lot.\n\n";
+            std::cout << "For more jokes, type 'Onwards'and enter.\n";
+            Sleep(3000);
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 9:
+            Sleep(3000);
+            std::cout << "I am not a vegetarian because I love animals. I am a vegetarian because I hate plants\n\n";
+            Sleep(500);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        case 10:
+            Sleep(500);
+            std::cout << "I asked my North Korean friend how it was there, he said he couldn't complain\n\n";
+            Sleep(3000);
+            std::cout << "For more jokes, type 'Onwards' and enter.\n";
+            std::cin >> random;
+            if (random == space) {
+                goto Jokes_Begin;
+            }
+
+            break;
+
+        }
+    
+}
