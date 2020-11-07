@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    double mass = 0;
+    double volume = 0;
+    double density = 0;
+    std::string choice = "";
+    std::cout << "Would you like to find density, mass or volume? Type the corresponding word (in lowercase) here: ";
+    std::cin >> choice;
+    if (choice == "density") {
+        std::cout << "Please enter the mass of the object\n";
+        std::cin >> mass;
+        std::cout << "Please enter the volume of the object\n";
+        std::cin >> volume;
+        std::cout << "The density of your opbject is: " << density << " gr/cm^3";
+    }
+    else if (choice == "mass") {
+        std::cout << "Please enter the density: ";
+        std::cin >> density;
+        std::cout << "Please enter the volume: ";
+        std::cin >> volume;
+        std::cout << "The mass is: " << volume * density << "gr";
+    }
+    else if (choice == "volume") {
+        std::cout << "Please enter the density: ";
+        std::cin >> density;
+        std::cout << "Please enter the mass: ";
+        std::cin >> mass;
+        std::cout << "The volume is: " << density / mass << "cm^3";
+    }
+    }
