@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+
+int main()
+{ 
+    int number = 5;
+    std::cin >> number;
+  switch (number) {
+  
+    case 1:
+    std::cout << "lignocane\n";
+    std::cout << "remember your local anaesthetics!!\n";
+    std::cout << "Basically, it makes you sleepy. ZZZZZzzz!\n";
+    break;
+    case 2:
+    std::cout << "prillocaine\n";
+    std::cout << "remember your local anaesthetics!!\n";
+    std::cout << "Basically, it makes you sleepy. ZZZZZzzz!\n";
+    break;
+    case 3:
+    std::cout << "bupivocaine\n";
+    std::cout << "remember your local anaesthetics!!\n";
+    std::cout << "Basically, it makes you sleepy. ZZZZZzzz!\n";
+    break;
+    case 4:
+    std::cout << "hyperparathyroidism\n";
+    std::cout << "wait what?!?!\n";
+    std::cout << "if it's half as complicated as the name, then i don't want to know what it does...\n";
+    break;
+    case 5:
+    std::cout << "cholecalciferol\n";
+    std::cout << "wait what?!?!\n";
+    std::cout << "if it's half as complicated as the name, then i don't want to know what it does...\n";
+    break;
+    case 6:
+    std::cout << "paracetamol\n";
+    std::cout << "you didn't expect them all to be complicated, did you?\n";
+    std::cout << "it's a pretty great painkiller\n";
+    break;
+    case 7:
+    std::cout << "ibruprofen\n";
+    std::cout << "you didn't expect them all to be complicated, did you?\n";
+    std::cout << "it's a pretty great painkiller\n";
+    break;
+    case 8:
+    std::cout << "Aspirin\n";
+    std::cout << "you didn't expect them all to be complicated, did you?\n";
+    std::cout << "it's a pretty great painkiller\n";
+    break;
+    case 9:
+    std::cout << "Talimogene Laherparepvec\n";
+    std::cout << "Daaammmnnn!!\n";
+    std::cout << "if it's half as complicated as the name, then i don't want to know what it does...\n";
+    break;
+    case 10 :
+    std::cout << "amlodipine";
+    std::cout << "oof\n";
+    std::cout << "takes your blood pressure down... its rewind time\n";
+    break;
+     case 11 :
+    std::cout << "morphine";
+    std::cout << "AAAaaand relaaaaaxxxx\n";
+    std::cout << "bang! and the pain is gone!!\n";
+    break;
+     case 12 :
+    std::cout << "chlorhexidine";
+    std::cout << "isn't that a type of bush?!?!\n";
+    std::cout << " what mouth bacteria\n";
+    break;
+    default :
+      std::cout << "i don't know how to pronounce that one";
+      break;
+  }
+}
